@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: white;
+}
+
+ul li a {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 1px;
+  color: white !important;
+  text-transform: uppercase;
+}
+::placeholder {
+  color: #1e3d58;
+  opacity: 1;
+  font-style: oblique;
+  letter-spacing: 2px !important;
+}
+.custom-hover {
+  color: #ffff;
+}
+.custom-hover:hover {
+  color: black !important;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: white !important;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.middle-bar {
+  margin: 5px auto;
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: #777777;
+}
+.carousel-item {
+  height: 90vh;
+  min-height: 300px;
+}
+.carousel-inner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+.carousel-caption {
+  z-index: 2;
+  padding-bottom: 170px;
+}
+
+.explore-button {
+  background-color: #1e3d58;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #164c4f;
+}
+
+.carousel-indicators button {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+}
+
+.w-100 {
+  height: 100vh;
+}
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: #1e3d58;
+  /* margin: 0 auto; */
+}
+.bi-arrow-through-heart-fill {
+  color: red;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.image-zoom {
+  position: relative;
+}
+.image-zoom-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.image-zoom-wrapper img {
+  transition: transform 0.3s ease-in-out;
+}
+.image-zoom:hover .image-zoom-wrapper img {
+  transform: scale(1.1);
+}
+
+.slick-slide {
+  margin: 0px 10px;
+  box-shadow: 4px 2px 10px gray;
+}
+.slick-slide img {
+  width: 100%;
+  border: 1px solid #1e3d58;
+  height: 20vh;
+  object-fit: cover;
+}
+
+.imgage {
+  background-image: url(./mobile-phone-1419275_1280.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  margin: 0 auto;
+  position: relative;
+  animation: panbackground 20s linear infinite;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.text-content {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  padding: 20px;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  animation: fade 2s ease-in-out forwards;
+}
+.footer-back {
+  background-color: #1e3d58 !important;
+  /* border: 1px solid red; */
+  color: white !important;
+}
+.fab {
+  color: white !important;
+}
+.text-body {
+  color: white !important;
+}
+@keyframes panbackground {
+  0% {
+    background-position: center center;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: center center;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translate(-50% 20%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50% -50%) scale(1);
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel-caption {
+    z-index: 2;
+    padding-bottom: 100px;
+  }
+  .imgage {
+    height: 60vh;
+  }
+  .text-content {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  .text-content h1 {
+    font-size: 1.5rem;
+  }
+  .text-content p {
+    font-size: 0.9rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
